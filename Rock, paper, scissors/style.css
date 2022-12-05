@@ -1,0 +1,302 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    background-image: url(638f5bf4253604ee28131d8d943e49be.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 900px;
+    height: 600px;
+    padding: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: relative;
+    top: 100px;
+    text-shadow: 5px 5px 10px red;
+    z-index: 1;
+}
+
+.animate{
+    /* animation details for the title */
+    animation-name: head;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes head {
+    0% {top: 100px;}
+    100% {top: -130px;}
+}
+
+.play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -300px;
+    background-color: rgb(218, 0, 0);
+    font-size: 35px;
+    border-radius: 15px;
+    width: 100px;
+    padding: 10px;
+    transition: .3s;
+    box-shadow: 3px 3px 8px black;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.btnanimation {
+    /* animation details for the play button */
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn {
+    0% {opacity: 1; top: -300px;}
+    100% {opacity: 0; top: 120px;} 
+}
+
+.play:hover {
+   transform: scale(1.2);
+   box-shadow: 6px 6px 10px black; 
+}
+
+.soundtrack{
+    display: none;
+}
+
+#pi {
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 500px;
+}
+
+.playerinterface {
+    animation-name: playerint;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes playerint {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.display {
+    display: flex;
+    border: 10px solid red;
+    border-style: groove;
+    width: 900px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    flex: 1;
+}
+
+.ai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    flex: 1;
+}
+
+.playerscore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.cpuscore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.cd {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    text-shadow: 3px 3px 8px black;
+    align-items: center;
+    font-size: 200px;
+    width: 300px;
+    height: 300px;
+}
+
+.choice {
+    display: flex;
+    width: 400px;
+    height: 85px;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.option {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.optbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.optbtn:hover {
+    transform: scale(1.1);
+}
+
+.roundcon {
+    /*change display to shoe the round texts*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    width: 300px;
+    height: 100px;
+    z-index: 4;
+}
+
+.roundtext {
+    display: flex;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 100;
+    text-shadow: 2px 2px 3px red;
+    z-index: 5;
+}
+
+#resetcontainer {
+    display: none;
+    position: relative;
+    border-radius: 10px;
+    top: -350px;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    box-shadow: 0px 0px 25px 300px rgba(0, 0, 0, 0.824);
+    width: 300px;
+    z-index: 3;
+}
+
+.resetanimation {
+    animation-name: resetanimation;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes resetanimation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.resettextcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.gameover {
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 1px 2px 3px red;
+    margin-bottom: 10px;
+}
+
+.resttext {
+    font-size: 20px;
+}
+    
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(218, 0, 0);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 80px;
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 20px;
+    transition: .3s;
+    box-shadow: 3px 3px 8px black;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.reset:hover {
+    transform: scale(1.2);
+}
